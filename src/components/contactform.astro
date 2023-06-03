@@ -4,7 +4,7 @@ import Button from "./ui/button.astro";
 
 <!-- To make this contact form work, create your free access key from https://web3forms.com/
      Then you will get all form submissions in your email inbox. -->
-<script src="https://js.hcaptcha.com/1/api.js" async defer></script>
+
 <form
   action="https://api.web3forms.com/submit"
   method="POST"
@@ -86,6 +86,9 @@ import Button from "./ui/button.astro";
     e.preventDefault();
     form.classList.add("was-validated");
     const hCaptcha = form.querySelector("textarea[name=h-captcha-response]").value
+
+    if (result.classList.contains("text-red-500"))
+      result.classList.remove("text-red-500")
 
     if (!hCaptcha) {
       e.preventDefault();
