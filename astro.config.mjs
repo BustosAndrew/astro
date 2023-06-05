@@ -5,7 +5,7 @@ import mdx from "@astrojs/mdx";
 import sitemap from "@astrojs/sitemap";
 
 export default defineConfig({
-  site: "https://astro-nine-azure.vercel.app/",
+  site: "https://soloiron.dev/",
   integrations: [
     tailwind(),
     image({
