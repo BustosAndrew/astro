@@ -6,9 +6,29 @@ import Projects from "@components/projects.astro";
 
 const projects = [
   {
+    name: "BuyBuddy",
+    tech: "Firebase, Python, Streamlit, ChatGPT",
+    popular: false,
+    features: [
+      "Amazon.au product recs",
+      "An understanding assistant",
+      "AI Function Calling",
+      "Google Sign In Auth",
+      "Available 24/7",
+    ],
+    button: {
+      text: "Try it",
+      link: "https://chat.buybuddy.me/",
+    },
+    button: {
+      text: "Learn more",
+      link: "https://buybuddy.me/",
+    },
+  },
+  {
     name: "Lirical",
     tech: "Next.js, Firebase, Chakra UI, Stripe",
-    popular: false,
+    popular: true,
     features: [
       "Generate lyric ideas",
       "Speech to text input",
@@ -24,7 +44,7 @@ const projects = [
   {
     name: "File Manager",
     tech: "Electron, React, Material UI, Node",
-    popular: true,
+    popular: false,
     features: [
       "Free to use",
       "Desktop only",
@@ -40,7 +60,7 @@ const projects = [
   {
     name: "Benzo Painting",
     tech: "Next.js, Emailjs",
-    popular: false,
+    popular: true,
     features: [
       "Small business",
       "Free quotes",
@@ -56,7 +76,7 @@ const projects = [
   {
     name: "Honest Reviews",
     tech: "React, Firebase, Material UI",
-    popular: true,
+    popular: false,
     features: [
       "Account Management",
       "Post an honest review",
@@ -66,21 +86,6 @@ const projects = [
     button: {
       text: "Visit",
       link: "https://bit.ly/3PW2kGd",
-    },
-  },
-  {
-    name: "Comeback Generator",
-    tech: "React Native, Expo",
-    popular: false,
-    features: [
-      "iOS mobile app",
-      "Free comebacks",
-      "Text comebacks to friends",
-      "Simplfied UI",
-    ],
-    button: {
-      text: "Watch Demo",
-      link: "https://www.youtube.com/watch?v=v4gk8piwuG0",
     },
   },
   {
