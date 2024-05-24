@@ -2,9 +2,24 @@
 import Layout from "@layouts/Layout.astro";
 import Container from "@components/container.astro";
 import Sectionhead from "@components/sectionhead.astro";
-import Projects from "@components/projects.astro";
+import ProjectsComponent from "@components/projects.astro";
 
 const projects = [
+  {
+    name: "Interpret.ai",
+    tech: "Postgres, Python, React, ChatGPT",
+    popular: true,
+    features: [
+      "Live Translation/Transcription",
+      "Document management",
+      "Live Broadcasting",
+      "Mobile web app",
+    ],
+    button: {
+      text: "Try it",
+      link: "https://interpretapp.ai/",
+    },
+  },
   {
     name: "BuyBuddy",
     tech: "Firebase, Python, Streamlit, ChatGPT",
@@ -14,7 +29,6 @@ const projects = [
       "An understanding assistant",
       "AI Function Calling",
       "Google Sign In Auth",
-      "Available 24/7",
     ],
     button: {
       text: "Github",
@@ -49,8 +63,8 @@ const projects = [
       "Replace specific characters",
     ],
     button: {
-      text: "Download",
-      link: "https://bit.ly/3yswk4V",
+      text: "Github",
+      link: "https://github.com/BustosAndrew/Desktop-Tools",
     },
   },
   {
@@ -84,21 +98,6 @@ const projects = [
       link: "https://bit.ly/3PW2kGd",
     },
   },
-  {
-    name: "MS Teams Box Integration",
-    tech: "React, TypeScript, Express",
-    popular: true,
-    features: [
-      "No app switching",
-      "Apply search filters",
-      "OAuth implementation",
-      "Improved file management",
-    ],
-    button: {
-      text: "Watch Demo",
-      link: "https://www.youtube.com/watch?v=b1wWadjCxuE",
-    },
-  },
 ];
 ---
 
@@ -110,7 +109,7 @@ const projects = [
     </Sectionhead>
 
     <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-screen-lg mt-12">
-      {projects.map((item) => <Projects plan={item} />)}
+      {projects.map((item) => <ProjectsComponent plan={item} />)}
     </div>
   </Container>
 </Layout>
