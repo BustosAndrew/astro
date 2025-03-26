@@ -1,1 +1,54 @@
 @import "tailwindcss";
+
+html.dark {
+  background-color: #1e2124;
+  color: #fff;
+}
+
+.dark .nav-links a {
+  color: #fff;
+}
+
+.dark img {
+  box-shadow: 4px 4px 0 #000;
+}
+
+.dark .yoga-link {
+  @apply text-white;
+}
+
+.dark .lightwave-link {
+  @apply text-yellow-400;
+  @apply font-bold;
+}
+
+.lightwave-link {
+  @apply text-yellow-400;
+  @apply font-bold;
+}
+
+.yoga-link {
+  @apply text-slate-800;
+}
+
+.dark
+  .prose
+  :where(h2, h3, h1, h4, h5, h6):not(
+    :where([class~="not-prose"], [class~="not-prose"] *)
+  ) {
+  @apply text-gray-300;
+}
+
+.dark
+  .prose
+  :where(blockquote):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+  @apply text-gray-200;
+}
+
+.dark
+  .prose
+  :where(thead th, a):not(
+    :where([class~="not-prose"], [class~="not-prose"] *)
+  ) {
+  @apply text-white;
+}
